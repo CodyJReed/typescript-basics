@@ -6,3 +6,13 @@ for (let i in words) {
     foundWord = true;
   }
 }
+
+// Variables whose type cannot be inferred correctly
+let numbers = [-10, -1, 12];
+let numberAboveZero: boolean | number = false;
+
+for (let i in numbers) {
+  if (numbers[i] > 0) {
+    numberAboveZero = numbers[i];
+  }
+}
